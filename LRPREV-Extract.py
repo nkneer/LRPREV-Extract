@@ -1,13 +1,14 @@
+# ----- Begin configuration section -----
+
+# You need to tell the program two things:
+#   1. PathRead: Where your preview files are
+#   2. PathWrite: Where you want to save the extracted JPEG files 
+PathRead = 'C:/extract/from/'
+PathWrite = 'C:/extract/to/'
+# ----- End configuration section -----
+
+# ----- Begin program section -----
 import os
-
-
-# Configuration section
-PathRead = 'C:\\Users\\nknee\\Desktop\\Lightroom\\' #Set to the path where your previews are
-PathWrite = 'C:\\extract\\to\\' #Set to the path you want your extracted JPEGs to be
-# end of configuration section
-
-
-# Begin program section
 PreviewFilesArray = []
 for path, subdirs, files in os.walk(PathRead):
     for file in files:
